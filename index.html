@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.65;color:#141414;
   background-color:#FFFFFF;background-image:radial-gradient(circle,#DEDEDE 1.3px,transparent 1.6px);background-size:24px 24px}
 a{color:#141414;text-decoration-color:#C8C8C8;text-underline-offset:4px}
@@ -25,7 +25,7 @@ a:hover{text-decoration-color:#141414}
 
 /* ---------- Opening screen ---------- */
 .hero{max-width:1040px;margin:0 auto;min-height:100vh;min-height:100svh;padding:64px 28px 32px;
-  display:flex;flex-direction:column;justify-content:space-between;gap:40px;scroll-snap-align:start}
+  display:flex;flex-direction:column;justify-content:space-between;gap:40px}
 .hero-row{flex:1 1 auto;display:flex;flex-wrap:wrap;align-items:center;align-content:center;justify-content:space-between;gap:56px 48px}
 .hero-text{flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:20px}
 h1{margin:0;font-weight:600;font-size:clamp(40px,6vw,64px);line-height:1.08;letter-spacing:-0.035em}
@@ -66,7 +66,7 @@ h2::before,h2::after{content:"";width:56px;height:2px;background:#C4C4C4;flex:no
 h3{margin:0;font-size:14px;font-weight:500;color:#767676}
 h3.sub{font-size:15px;font-weight:700;color:#141414}
 ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:20px}
-#about{scroll-snap-align:start;scroll-margin-top:40px;gap:28px}
+#about{scroll-margin-top:24px;gap:28px}
 .cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}
 .stack{display:flex;flex-direction:column;gap:8px}
 .pub{display:flex;flex-wrap:wrap;gap:2px 24px;justify-content:space-between}
@@ -256,19 +256,46 @@ document.getElementById('contact').addEventListener('submit', function (e) {
     '&body=' + encodeURIComponent(msg + sign);
 });
 
-// One mouse-wheel turn moves between the opening screen and About.
+// One mouse-wheel turn or one swipe moves between the opening screen and About.
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var busy = false;
-  function go(t) { busy = true; window.scrollTo({ top: t, behavior: 'smooth' }); setTimeout(function () { busy = false; }, 800); }
+  function aboutTop() {
+    var about = document.getElementById('about');
+    return Math.max(0, Math.round(about.getBoundingClientRect().top + window.scrollY - 24));
+  }
+  function go(t) {
+    busy = true;
+    window.scrollTo({ top: t, behavior: 'smooth' });
+    setTimeout(function () { busy = false; }, 900);
+  }
+  // Mouse wheel / trackpad
   window.addEventListener('wheel', function (e) {
     if (busy) { e.preventDefault(); return; }
-    var about = document.getElementById('about');
-    var top = Math.max(0, about.getBoundingClientRect().top + window.scrollY - 40);
-    var y = window.scrollY;
+    var top = aboutTop(), y = window.scrollY;
     if (e.deltaY > 0 && y < top - 5) { e.preventDefault(); go(top); }
     else if (e.deltaY < 0 && y > 5 && y <= top + 5) { e.preventDefault(); go(0); }
   }, { passive: false });
+  // Touch screens
+  var startY = null, startScroll = 0;
+  window.addEventListener('touchstart', function (e) {
+    if (e.touches.length !== 1) { startY = null; return; }
+    startY = e.touches[0].clientY; startScroll = window.scrollY;
+  }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (startY === null) return;
+    var dy = startY - e.touches[0].clientY, top = aboutTop();
+    var inHero = startScroll < top - 5;
+    var atAbout = startScroll > 5 && startScroll <= top + 5;
+    if (busy || (inHero && dy > 0) || (atAbout && dy < 0)) e.preventDefault();
+  }, { passive: false });
+  window.addEventListener('touchend', function (e) {
+    if (startY === null || busy) { startY = null; return; }
+    var dy = startY - e.changedTouches[0].clientY, top = aboutTop();
+    if (dy > 30 && startScroll < top - 5) go(top);
+    else if (dy < -30 && startScroll > 5 && startScroll <= top + 5) go(0);
+    startY = null;
+  }, { passive: true });
 })();
 </script>
 </body>
