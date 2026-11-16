@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prana Narayanan · Teacher and Researcher</title>
+<meta name="description" content="Prana Narayanan is an Assistant Professor at Nova SBE in Lisbon, studying how people, groups and institutions make decisions from imperfect evidence.">
+<meta property="og:title" content="Prana Narayanan · Teacher and Researcher">
+<meta property="og:description" content="Assistant Professor at Nova SBE, Lisbon. Decision science, humans and AI, and the science of science.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="prana.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' fill='%23F5E9DA' stroke='%238A4B14' stroke-width='2' stroke-dasharray='2 2'/%3E%3Crect x='8' y='8' width='16' height='16' fill='none' stroke='%238A4B14' stroke-width='1.5'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Arial' font-weight='700' font-size='11' fill='%238A4B14'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+body{margin:0;font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.65;color:#141414;
+  background-color:#FFFFFF;background-image:radial-gradient(circle,#CFCFCF 1.3px,transparent 1.6px);background-size:24px 24px}
+a{color:#141414;text-decoration-color:#C8C8C8;text-underline-offset:4px}
+a:hover{text-decoration-color:#141414}
+.muted{color:#767676}
+.small{font-size:15px}
+
+/* ---------- Opening screen ---------- */
+.hero{max-width:1040px;margin:0 auto;min-height:100vh;min-height:100svh;padding:64px 28px 32px;
+  display:flex;flex-direction:column;justify-content:space-between;gap:40px;scroll-snap-align:start}
+.hero-row{flex:1 1 auto;display:flex;flex-wrap:wrap;align-items:center;align-content:center;justify-content:space-between;gap:56px 48px}
+.hero-text{flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:20px}
+h1{margin:0;font-weight:600;font-size:clamp(40px,6vw,64px);line-height:1.08;letter-spacing:-0.035em}
+h1 .role{display:block;color:#8A8A8A;font-size:.55em;font-weight:500;letter-spacing:-0.02em;line-height:1.3}
+.hello{margin:0;color:#555555}
+.hero-stamps{flex:0 1 auto;position:relative;display:flex;gap:20px;align-items:flex-start;padding:24px 24px 0 0;
+  filter:drop-shadow(0 3px 5px rgba(0,0,0,.16))}
+.postmark{position:absolute;left:290px;top:8px;transform:rotate(-12deg);opacity:.5}
+.scroll-cue{align-self:center;display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px;color:#767676;text-decoration:none;font-size:14px}
+
+/* ---------- Stamps ---------- */
+.stamp{width:182px;height:224px;padding:9px;background:#FBF8F2;flex:none;
+  -webkit-mask:radial-gradient(circle,transparent 3.6px,#000 4.2px) -7px -7px/14px 14px,linear-gradient(#000,#000) center/calc(100% - 18px) calc(100% - 18px) no-repeat;
+  mask:radial-gradient(circle,transparent 3.6px,#000 4.2px) -7px -7px/14px 14px,linear-gradient(#000,#000) center/calc(100% - 18px) calc(100% - 18px) no-repeat}
+.face{height:100%;border:1px solid #D7D0C2;padding:14px;position:relative;outline:1px solid var(--ink);outline-offset:-6px;
+  background:var(--bg);display:flex;flex-direction:column;justify-content:space-between}
+.face.centered{justify-content:center;align-items:center;gap:14px;text-align:center}
+.denom{position:absolute;top:12px;right:13px;font-size:13px;font-weight:700;line-height:1;color:var(--ink)}
+.label{font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--ink)}
+.phrase{font-size:15px;font-weight:600;line-height:1.25;color:var(--deep)}
+.photo .face{padding:8px;gap:8px;outline-offset:-4px;justify-content:flex-start}
+.photo img{flex:1 1 auto;min-height:0;width:100%;object-fit:cover;object-position:50% 30%;display:block}
+.photo .caption{display:flex;justify-content:space-between;padding:0 2px}
+.blue{--bg:#E8EEF8;--ink:#2B4A80;--deep:#1E2F52}
+.clay{--bg:#F5E9DA;--ink:#8A4B14;--deep:#5E330D}
+.teal{--bg:#E3F0EC;--ink:#1F5E52;--deep:#153F37}
+.rose{--bg:#F3E4E6;--ink:#8A2E3C;--deep:#5C1D27}
+.olive{--bg:#ECEBE3;--ink:#4D5236;--deep:#33361F}
+
+/* ---------- Main column ---------- */
+main{max-width:680px;margin:0 auto;padding:48px 28px;display:flex;flex-direction:column;gap:64px}
+section{display:flex;flex-direction:column;gap:20px}
+h2{margin:0 0 4px;text-align:center;font-size:clamp(32px,5vw,44px);font-weight:500;letter-spacing:-0.02em;
+  display:flex;align-items:center;justify-content:center;gap:20px}
+h2::before,h2::after{content:"";width:56px;height:2px;background:#C4C4C4;flex:none}
+h3{margin:0;font-size:14px;font-weight:500;color:#767676}
+ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:20px}
+#about{scroll-snap-align:start;scroll-margin-top:40px;gap:28px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.stack{display:flex;flex-direction:column;gap:8px}
+.pub{display:flex;flex-wrap:wrap;gap:2px 24px;justify-content:space-between}
+.pub > span:first-child{flex:1 1 420px;min-width:0}
+.go{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;margin-left:6px;vertical-align:-6px;border-radius:6px;text-decoration:none}
+.go:hover{background:#F1F1F1}
+.wp{gap:16px}
+.wp li,.jobs li{display:flex;flex-direction:column;gap:2px}
+.exp-row{display:flex;flex-wrap:wrap;gap:40px 32px;align-items:flex-start}
+.jobs{flex:1 1 260px;min-width:0;gap:24px}
+.jobs .desc{color:#555555;font-size:15px}
+.jobs .when{color:#8A8A8A;font-size:13px;letter-spacing:.02em}
+.stamp-grid{flex:1 1 266px;min-width:0;zoom:.7;filter:drop-shadow(0 3px 5px rgba(0,0,0,.16));
+  display:flex;flex-wrap:wrap;gap:28px 24px;justify-content:center;align-content:flex-start;padding:8px 0}
+.stamp-grid .phrase{font-size:20px}
+.stamp-grid .denom{font-size:17px}
+
+/* ---------- Contact ---------- */
+form{width:100%;max-width:440px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.pair{display:flex;flex-wrap:wrap;gap:12px}
+.pair input{flex:1 1 160px;min-width:0}
+input,textarea{width:100%;padding:12px 14px;border:1px solid #D0D0D0;border-radius:12px;font:inherit;font-size:16px;color:#141414;background:#FFFFFF}
+textarea{resize:vertical}
+input:focus,textarea:focus{outline:2px solid #141414;outline-offset:1px}
+.send{align-self:center;padding:10px 22px;min-height:44px;background:#141414;color:#FFFFFF;border:0;border-radius:999px;font:inherit;font-size:15px;font-weight:500;cursor:pointer}
+.send:hover{background:#333333}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:#767676;padding-top:24px;border-top:1px solid #EEEEEE}
+footer a{color:#767676}
+
+/* ---------- Phones ---------- */
+@media (max-width:560px){
+  body{font-size:16px}
+  .hero{padding:40px 20px 24px;gap:28px}
+  .hero-row{justify-content:center;gap:40px}
+  .hero-stamps{zoom:.8;padding-right:8px}
+  .postmark{left:auto;right:-20px}
+  main{padding:40px 20px;gap:56px}
+  h2{gap:12px}
+  h2::before,h2::after{width:28px}
+}
+@media (max-width:380px){
+  .hero-stamps{zoom:.68}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="home">
+  <div class="hero-row">
+    <div class="hero-text">
+      <h1>Hi, I am Prana,<span class="role">Teacher and Researcher.</span></h1>
+      <p class="hello">Thank you for stopping by.</p>
+    </div>
+    <div class="hero-stamps" aria-label="Where I am now">
+      <div class="stamp photo" style="transform:rotate(-4deg)">
+        <div class="face blue">
+          <img src="prana.jpg" alt="Pencil sketch of Prana smiling, in glasses and a plaid jacket">
+          <div class="caption"><span class="label">THAT'S ME</span><span class="label">PRANA</span></div>
+        </div>
+      </div>
+      <div class="stamp" style="transform:rotate(3deg);margin-top:48px">
+        <div class="face clay">
+          <span class="denom">80c</span>
+          <span class="label">LISBOA</span>
+          <svg role="img" aria-label="Line drawing of a Lisbon tram" width="100%" viewBox="0 0 140 100" fill="none" stroke="#8A4B14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M0 14 L140 20"/><path d="M74 34 L92 16"/><rect x="28" y="30" width="84" height="6" rx="2"/><rect x="20" y="36" width="100" height="42" rx="7" fill="#F3D27A"/><rect x="28" y="44" width="14" height="14" rx="2" fill="#FBF8F2"/><rect x="48" y="44" width="14" height="14" rx="2" fill="#FBF8F2"/><rect x="68" y="44" width="14" height="30" rx="2" fill="#FBF8F2"/><rect x="88" y="44" width="14" height="14" rx="2" fill="#FBF8F2"/><path d="M20 64 H66 M84 64 H120"/><circle cx="40" cy="84" r="5" fill="#F5E9DA"/><circle cx="100" cy="84" r="5" fill="#F5E9DA"/><path d="M4 94 H136"/></svg>
+          <span class="phrase">Currently in Lisbon</span>
+        </div>
+      </div>
+      <svg class="postmark" aria-hidden="true" width="132" height="132" viewBox="0 0 132 132"><circle cx="66" cy="66" r="52" fill="none" stroke="#3A3A3A" stroke-width="2"/><circle cx="66" cy="66" r="40" fill="none" stroke="#3A3A3A" stroke-width="1"/><text x="66" y="71" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" letter-spacing="2" fill="#3A3A3A">LISBOA</text></svg>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#about">Scroll
+    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#767676" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+  </a>
+</header>
+
+<main>
+
+<section id="about" aria-labelledby="about-h">
+  <h2 id="about-h">About</h2>
+  <p style="margin:0">I'm an Assistant Professor at Nova School of Business and Economics in Lisbon. I study how people, groups and institutions make decisions from imperfect evidence.</p>
+  <div class="cols">
+    <div class="stack">
+      <h3>Links</h3>
+      <a href="https://www.linkedin.com/in/prananarayanan">LinkedIn</a>
+      <a href="https://www.novasbe.unl.pt/en/faculty-research/faculty/faculty-detail/id/1314/pranadharthiharan-narayanan">Nova SBE</a>
+      <a href="https://substack.com/@prananaryanan">Substack</a>
+      <a href="https://www.novasbe.unl.pt/en/community/centers-labs-forums/behavioral-lab/overview">Nova Behavioral Lab</a>
+      <a href="https://scholar.google.com/citations?user=4SGIOC8AAAAJ&amp;hl=en">Google Scholar</a>
+    </div>
+    <div class="stack">
+      <h3>Interests</h3>
+      <span>Decision science</span>
+      <span>Humans and AI</span>
+      <span>Behavioral operations</span>
+      <span>Science of science</span>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="research-h">
+  <h2 id="research-h">Research</h2>
+  <h3>Published</h3>
+  <ul>
+    <li class="pub">
+      <span>The robust beauty of small recent samples<a class="go" href="https://www.sciencedirect.com/science/article/abs/pii/S0377221726000469" aria-label="Read 'The robust beauty of small recent samples' in EJOR" title="Read in EJOR"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="#141414" stroke="#141414" stroke-width="1.2" stroke-linejoin="round"><path d="M5 3l14 8.5-6.2 1.3 3.7 6.9-2.6 1.4-3.7-6.9L5 19z"/></svg></a><br><span class="muted small">with J. Lejarraga &amp; T. Lejarraga · European Journal of Operational Research</span></span>
+      <span class="muted small">2026</span>
+    </li>
+    <li class="pub">
+      <span>Risk-averse algorithmic support and inventory management<a class="go" href="https://www.sciencedirect.com/science/article/abs/pii/S0377221724008634" aria-label="Read 'Risk-averse algorithmic support and inventory management' in EJOR" title="Read in EJOR"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="#141414" stroke="#141414" stroke-width="1.2" stroke-linejoin="round"><path d="M5 3l14 8.5-6.2 1.3 3.7 6.9-2.6 1.4-3.7-6.9L5 19z"/></svg></a><br><span class="muted small">with J. Somasundaram &amp; M. Seifert · European Journal of Operational Research</span></span>
+      <span class="muted small">2025</span>
+    </li>
+  </ul>
+  <h3 style="margin-top:16px">Working papers</h3>
+  <ul class="wp">
+    <li><span>AI after peer review: Toward an auditable scientific record</span><span class="muted small">Under review</span></li>
+    <li><span>Designing fair selection systems under identity constraints</span><span class="muted small">Revise &amp; resubmit, Academy of Management Perspectives</span></li>
+    <li><span>How robust are p-values to small sample exclusions?</span><span class="muted small">with S. Malik &amp; L. Franieck</span></li>
+    <li><span>Beyond majority voting: A group diversity rule for decision making</span><span class="muted small">with E. Diecidue &amp; M. Seifert</span></li>
+    <li><span>When the past breaks: How the structure of the environment shapes temporal dependence and predictions from experience</span><span class="muted small">with S. Woo, J. Lejarraga &amp; T. Lejarraga</span></li>
+  </ul>
+</section>
+
+<section aria-labelledby="exp-h">
+  <h2 id="exp-h">Experience</h2>
+  <div class="exp-row">
+    <ul class="jobs">
+      <li><span>Nova SBE, Assistant Professor</span><span class="desc">Teaching and research.</span><span class="when">2023 – now</span></li>
+      <li><span>IE Business School, PhD in Management</span><span class="desc">How algorithmic advice shapes human decisions.</span><span class="when">2018 – 2023</span></li>
+      <li><span>Technology Consultant, Austin</span><span class="desc">Engineering support for patent litigation.</span><span class="when">2013 – 2017</span></li>
+      <li><span>UT Austin &amp; NIT Trichy</span><span class="desc">Electrical and computer engineering.</span><span class="when">2006 – 2012</span></li>
+    </ul>
+    <div class="stamp-grid" aria-label="A few things about me">
+      <div class="stamp" style="transform:rotate(-3deg)"><div class="face centered blue"><span class="denom">10c</span>
+        <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#2B4A80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M14 4l-4 16"/></svg>
+        <span class="phrase">Teaches coding</span></div></div>
+      <div class="stamp" style="transform:rotate(2deg)"><div class="face centered clay"><span class="denom">25c</span>
+        <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#8A4B14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12.5l11-5.5 2 4-11 5.5z"/><path d="M14 7l3.5-1.75 2 4L16 11"/><path d="M9.5 14.5L7 21M10.5 14L13 21"/><path d="M19 2.5v2M18 3.5h2"/></svg>
+        <span class="phrase">Curious, mostly</span></div></div>
+      <div class="stamp" style="transform:rotate(-1.5deg)"><div class="face centered teal"><span class="denom">50c</span>
+        <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F5E52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+        <span class="phrase">Engineer turned B-school prof</span></div></div>
+      <div class="stamp" style="transform:rotate(3deg)"><div class="face centered rose"><span class="denom">80c</span>
+        <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#8A2E3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3v3M12 3v3"/></svg>
+        <span class="phrase">Host of Words with Coffee</span></div></div>
+      <div class="stamp" style="transform:rotate(-2deg)"><div class="face centered olive"><span class="denom">1€</span>
+        <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#4D5236" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1L19 8a2.1 2.1 0 0 0-3-3L5 16z"/><path d="M14 7l3 3"/></svg>
+        <span class="phrase">Enjoys reading, suffers writing</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="touch-h">
+  <h2 id="touch-h">Get in touch</h2>
+  <!-- To deliver messages straight to your inbox, create a free form at formspree.io,
+       then set action="https://formspree.io/f/YOUR_ID" method="POST" on this form
+       and delete the script at the bottom of the page. -->
+  <form id="contact" aria-labelledby="touch-h">
+    <div class="pair">
+      <input type="text" name="name" aria-label="Your name" placeholder="Your name" autocomplete="name">
+      <input type="email" name="email" aria-label="Your email" placeholder="Your email" autocomplete="email">
+    </div>
+    <textarea name="message" rows="3" aria-label="Your message" placeholder="Say hello, ask a question…" required></textarea>
+    <button class="send" type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <span>© 2026 Prana Narayanan</span>
+  <a href="#home">Back to top</a>
+</footer>
+
+</main>
+
+<script>
+// Contact form: opens the visitor's email app with the message filled in.
+document.getElementById('contact').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target;
+  var name = f.name.value.trim(), email = f.email.value.trim(), msg = f.message.value.trim();
+  var sign = (name || email) ? '\n\n— ' + name + (email ? ' (' + email + ')' : '') : '';
+  window.location.href = 'mailto:prana.n88@gmail.com?subject=' + encodeURIComponent('Hello from your website') +
+    '&body=' + encodeURIComponent(msg + sign);
+});
+
+// One mouse-wheel turn moves between the opening screen and About.
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var busy = false;
+  function go(t) { busy = true; window.scrollTo({ top: t, behavior: 'smooth' }); setTimeout(function () { busy = false; }, 800); }
+  window.addEventListener('wheel', function (e) {
+    if (busy) { e.preventDefault(); return; }
+    var about = document.getElementById('about');
+    var top = Math.max(0, about.getBoundingClientRect().top + window.scrollY - 40);
+    var y = window.scrollY;
+    if (e.deltaY > 0 && y < top - 5) { e.preventDefault(); go(top); }
+    else if (e.deltaY < 0 && y > 5 && y <= top + 5) { e.preventDefault(); go(0); }
+  }, { passive: false });
+})();
+</script>
+</body>
+</html>
