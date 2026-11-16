@@ -49,6 +49,8 @@ h1 .role{display:block;color:#8A8A8A;font-size:.55em;font-weight:500;letter-spac
 .photo .face{padding:8px;gap:8px;outline-offset:-4px;justify-content:flex-start}
 .photo img{flex:1 1 auto;min-height:0;width:100%;object-fit:cover;object-position:50% 30%;display:block}
 .photo .caption{display:flex;justify-content:space-between;padding:0 2px}
+.disc{width:68px;height:68px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center}
+.stamp-grid .face{background:linear-gradient(var(--bg),var(--bg)) padding-box}
 .blue{--bg:#E8EEF8;--ink:#2B4A80;--deep:#1E2F52}
 .clay{--bg:#F5E9DA;--ink:#8A4B14;--deep:#5E330D}
 .teal{--bg:#E3F0EC;--ink:#1F5E52;--deep:#153F37}
@@ -73,13 +75,17 @@ ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:20p
 .wp{gap:16px}
 .wp li,.jobs li{display:flex;flex-direction:column;gap:2px}
 .exp-row{display:flex;flex-wrap:wrap;gap:40px 32px;align-items:flex-start}
-.jobs{flex:1 1 260px;min-width:0;gap:24px}
+.jobs{flex:1 1 240px;min-width:0;gap:24px}
 .jobs .desc{color:#555555;font-size:15px}
 .jobs .when{color:#8A8A8A;font-size:13px;letter-spacing:.02em}
-.stamp-grid{flex:1 1 266px;min-width:0;zoom:.7;filter:drop-shadow(0 3px 5px rgba(0,0,0,.16));
+.stamp-grid{flex:0 0 420px;min-width:0;zoom:.7;filter:drop-shadow(0 3px 5px rgba(0,0,0,.16));
   display:flex;flex-wrap:wrap;gap:28px 24px;justify-content:center;align-content:flex-start;padding:8px 0}
 .stamp-grid .phrase{font-size:20px}
 .stamp-grid .denom{font-size:17px}
+.stamp-grid .blue{--bg:#E4EAF8;--accent:#EBD79A}
+.stamp-grid .clay{--bg:#F6E7D6;--accent:#56648A}
+.stamp-grid .teal{--bg:#DDEFE7;--accent:#E9C3AE}
+.stamp-grid .olive{--bg:#EFEADC;--accent:#C6D1AC}
 
 /* ---------- Contact ---------- */
 form{width:100%;max-width:440px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
@@ -199,19 +205,16 @@ footer a{color:#767676}
     </ul>
     <div class="stamp-grid" aria-label="A few things about me">
       <div class="stamp" style="transform:rotate(-3deg)"><div class="face centered blue"><span class="denom">10c</span>
-        <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#2B4A80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M14 4l-4 16"/></svg>
+        <span class="disc"><svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#2B4A80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M14 4l-4 16"/></svg></span>
         <span class="phrase">Teaches coding</span></div></div>
       <div class="stamp" style="transform:rotate(2deg)"><div class="face centered clay"><span class="denom">25c</span>
-        <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#8A4B14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12.5l11-5.5 2 4-11 5.5z"/><path d="M14 7l3.5-1.75 2 4L16 11"/><path d="M9.5 14.5L7 21M10.5 14L13 21"/><path d="M19 2.5v2M18 3.5h2"/></svg>
+        <span class="disc"><svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#FBF3E4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12.5l11-5.5 2 4-11 5.5z"/><path d="M14 7l3.5-1.75 2 4L16 11"/><path d="M9.5 14.5L7 21M10.5 14L13 21"/><path d="M19 2.5v2M18 3.5h2"/></svg></span>
         <span class="phrase">Curious, mostly</span></div></div>
       <div class="stamp" style="transform:rotate(-1.5deg)"><div class="face centered teal"><span class="denom">50c</span>
-        <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F5E52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+        <span class="disc"><svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#1F5E52" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span>
         <span class="phrase">Engineer turned B-school prof</span></div></div>
-      <div class="stamp" style="transform:rotate(3deg)"><div class="face centered rose"><span class="denom">80c</span>
-        <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#8A2E3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3v3M12 3v3"/></svg>
-        <span class="phrase">Host of Words with Coffee</span></div></div>
       <div class="stamp" style="transform:rotate(-2deg)"><div class="face centered olive"><span class="denom">1€</span>
-        <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#4D5236" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1L19 8a2.1 2.1 0 0 0-3-3L5 16z"/><path d="M14 7l3 3"/></svg>
+        <span class="disc"><svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#4D5236" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1L19 8a2.1 2.1 0 0 0-3-3L5 16z"/><path d="M14 7l3 3"/></svg></span>
         <span class="phrase">Enjoys reading, suffers writing</span></div></div>
     </div>
   </div>
