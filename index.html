@@ -117,6 +117,12 @@ footer a{color:#767676}
 @media (hover:hover){.abs:hover .abs-card{opacity:1;visibility:visible;transform:none}}
 .abs.open .abs-card,.abs:focus-within .abs-card{opacity:1;visibility:visible;transform:none}
 
+
+/* ---------- Typing effect ---------- */
+.tw-rest{visibility:hidden}
+.tw-caret{display:inline-block;width:2px;height:.95em;margin-left:2px;vertical-align:-0.1em;background:currentColor;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
 /* ---------- Phones ---------- */
 @media (max-width:560px){
   body{font-size:16px}
@@ -142,8 +148,8 @@ footer a{color:#767676}
 <header class="hero" id="home">
   <div class="hero-row">
     <div class="hero-text">
-      <h1>Hi, I am Prana,<span class="role">Teacher and Researcher.</span></h1>
-      <p class="hello">Thank you for stopping by.</p>
+      <h1>Hi, I am Prana,<span class="role" data-type>Teacher and Researcher.</span></h1>
+      <p class="hello" data-type>Thank you for stopping by.</p>
     </div>
     <div class="hero-stamps" aria-label="Where I am now">
       <div class="stamp photo" style="transform:rotate(-4deg)">
@@ -268,6 +274,42 @@ footer a{color:#767676}
 </main>
 
 <script>
+
+// Typing effect for the role line and the greeting (text stays in the page for search engines).
+(function () {
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-type]'));
+  if (!els.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  els.forEach(function (el) {
+    var text = el.textContent;
+    el.setAttribute('aria-label', text);
+    el.textContent = '';
+    var typed = document.createElement('span'), caret = document.createElement('span'), rest = document.createElement('span');
+    typed.setAttribute('aria-hidden', 'true'); rest.setAttribute('aria-hidden', 'true');
+    caret.className = 'tw-caret'; rest.className = 'tw-rest'; rest.textContent = text; caret.style.display = 'none';
+    el.appendChild(typed); el.appendChild(caret); el.appendChild(rest);
+    el._tw = { text: text, typed: typed, caret: caret, rest: rest };
+  });
+  function type(i) {
+    if (i >= els.length) return;
+    var t = els[i]._tw, n = 0;
+    t.caret.style.display = 'inline-block';
+    (function step() {
+      n++;
+      t.typed.textContent = t.text.slice(0, n);
+      t.rest.textContent = t.text.slice(n);
+      if (n < t.text.length) {
+        var ch = t.text.charAt(n - 1);
+        setTimeout(step, /[,.]/.test(ch) ? 260 : 45 + Math.random() * 45);
+      } else if (i < els.length - 1) {
+        setTimeout(function () { t.caret.style.display = 'none'; type(i + 1); }, 450);
+      } else {
+        setTimeout(function () { t.caret.style.display = 'none'; }, 2600);
+      }
+    })();
+  }
+  setTimeout(function () { type(0); }, 500);
+})();
+
 // Contact form: opens the visitor's email app with the message filled in.
 document.getElementById('contact').addEventListener('submit', function (e) {
   e.preventDefault();
