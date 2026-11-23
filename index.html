@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Prana Narayanan · Teacher and Researcher</title>
-<meta name="description" content="Prana Narayanan is an Assistant Professor at Nova SBE in Lisbon, studying how people, groups and institutions make decisions from imperfect evidence.">
+<meta name="description" content="Prana Narayanan is an Assistant Professor at Nova SBE in Lisbon, studying how individuals, groups and institutions make decisions from imperfect information.">
 <meta property="og:title" content="Prana Narayanan · Teacher and Researcher">
 <meta property="og:description" content="Assistant Professor at Nova SBE, Lisbon. Decision science, humans and AI, and the science of science.">
 <meta property="og:type" content="website">
@@ -102,6 +102,21 @@ input:focus,textarea:focus{outline:2px solid #141414;outline-offset:1px}
 footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:#767676;padding-top:24px;border-top:1px solid #EEEEEE}
 footer a{color:#767676}
 
+
+/* ---------- Abstract pop-ups ---------- */
+.wp li,.pub{position:relative}
+.abs{display:inline}
+.abs-btn{font:inherit;font-size:12px;font-weight:500;letter-spacing:.03em;color:#666666;background:#F3F3F1;border:1px solid #E2E2DE;border-radius:999px;padding:1px 9px;margin-left:8px;vertical-align:2px;cursor:pointer;line-height:1.5}
+.abs-btn:hover,.abs.open .abs-btn{background:#141414;color:#FFFFFF;border-color:#141414}
+.abs-card{position:absolute;left:0;right:0;top:100%;margin-top:6px;z-index:20;background:#FFFFFF;border:1px solid #E6E4DE;border-radius:12px;
+  box-shadow:0 12px 32px rgba(0,0,0,.12);padding:16px 18px;font-size:14.5px;line-height:1.6;color:#333333;
+  opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .15s,transform .15s,visibility .15s}
+.abs-card::before{content:"";position:absolute;left:0;right:0;top:-10px;height:10px}
+.abs-card b{display:block;font-size:11px;letter-spacing:.1em;color:#8A8A8A;font-weight:600;margin-bottom:6px}
+.abs-card b.why{margin-top:12px;padding-top:12px;border-top:1px solid #EEEEEE}
+@media (hover:hover){.abs:hover .abs-card{opacity:1;visibility:visible;transform:none}}
+.abs.open .abs-card,.abs:focus-within .abs-card{opacity:1;visibility:visible;transform:none}
+
 /* ---------- Phones ---------- */
 @media (max-width:560px){
   body{font-size:16px}
@@ -157,7 +172,7 @@ footer a{color:#767676}
 
 <section id="about" aria-labelledby="about-h">
   <h2 id="about-h">About</h2>
-  <p style="margin:0">I'm an Assistant Professor at Nova School of Business and Economics in Lisbon. I study how people, groups and institutions make decisions from imperfect evidence.</p>
+  <p style="margin:0">I'm an Assistant Professor at Nova School of Business and Economics in Lisbon. I study how individuals, groups and institutions make decisions from imperfect information.</p>
   <div class="cols">
     <div class="stack">
       <h3>Links</h3>
@@ -182,21 +197,25 @@ footer a{color:#767676}
   <h3 class="sub">Published</h3>
   <ul>
     <li class="pub">
-      <span><a class="paper" target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0377221726000469">The robust beauty of small recent samples<span class="arr" aria-hidden="true">↗</span></a><br><span class="muted small">with J. Lejarraga &amp; T. Lejarraga<span class="sep"> · </span><span class="journal">European Journal of Operational Research</span></span></span>
+      <span><a class="paper" target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0377221726000469">The robust beauty of small recent samples<span class="arr" aria-hidden="true">↗</span></a><span class="abs"><button class="abs-btn" type="button" aria-expanded="false" aria-controls="abs-robust">abstract</button><span class="abs-card" id="abs-robust" role="note"><b>ABSTRACT</b>Organizational theory typically advises managers to anticipate future conditions by gathering as much information as possible before making decisions. In practice, however, people often rely on small samples of recent experience. What should managers do? We argue that the answer depends on the environment’s structure—particularly its temporal dependence. Our study examines the robustness of relying on small, recent samples as a function of the temporal patterns in the environment. Drawing on simulations, time-series analysis of managerial information environments, and an experiment, we show that reliance on recent samples improves predictive accuracy in temporally dependent environments, that managerial environments are strongly temporally dependent, and, finally, that individuals adapt sample size to match environmental structure. It is therefore good practice for managers to rely on small recent samples in prediction. Together, our findings contribute to behavioral operational research by showing that intuitive reliance on recent experience is not a flaw but an adaptive response to real-world temporal dynamics.</span></span><br><span class="muted small">with J. Lejarraga &amp; T. Lejarraga<span class="sep"> · </span><span class="journal">European Journal of Operational Research</span></span></span>
       <span class="muted small">2026</span>
     </li>
     <li class="pub">
-      <span><a class="paper" target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0377221724008634">Risk-averse algorithmic support and inventory management<span class="arr" aria-hidden="true">↗</span></a><br><span class="muted small">with J. Somasundaram &amp; M. Seifert<span class="sep"> · </span><span class="journal">European Journal of Operational Research</span></span></span>
+      <span><a class="paper" target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0377221724008634">Risk-averse algorithmic support and inventory management<span class="arr" aria-hidden="true">↗</span></a><span class="abs"><button class="abs-btn" type="button" aria-expanded="false" aria-controls="abs-risk">abstract</button><span class="abs-card" id="abs-risk" role="note"><b>ABSTRACT</b>We study how managers allocate resources in response to algorithmic recommendations that are programmed with specific levels of risk aversion. Using the anchoring and adjustment heuristic, we derive our predictions and test them in a series of multi-item newsvendor experiments. We find that highly risk-averse algorithmic recommendations have a strong and persistent influence on order decisions, even after the recommendations are no longer available. Furthermore, we show that these effects are similar regardless of factors such as source of advice (i.e., human vs. algorithm) and decision autonomy (i.e., whether the algorithm is externally assigned or chosen by the subjects themselves). Finally, we disentangle the effect of risk attitude from that of anchor distance and find that subjects selectively adjust their order decisions by relying more on algorithmic advice that contrasts with their inherent risk preferences. Our findings suggest that organizations can strategically utilize risk-averse algorithmic tools to improve inventory decisions while preserving managerial autonomy.</span></span><br><span class="muted small">with J. Somasundaram &amp; M. Seifert<span class="sep"> · </span><span class="journal">European Journal of Operational Research</span></span></span>
       <span class="muted small">2025</span>
     </li>
   </ul>
   <h3 class="sub" style="margin-top:16px">Working papers</h3>
   <ul class="wp">
-    <li><span>AI after peer review: Toward an auditable scientific record</span><span class="muted small">Under review</span></li>
-    <li><span>Designing fair selection systems under identity constraints</span><span class="muted small">Revise &amp; resubmit, Academy of Management Perspectives</span></li>
+    <li><span>AI after peer review: Toward an auditable scientific record<span class="abs"><button class="abs-btn" type="button" aria-expanded="false" aria-controls="abs-audit">abstract</button><span class="abs-card" id="abs-audit" role="note"><b>ABSTRACT</b>Peer review is the primary quality-control mechanism of science, yet systematic scrutiny of research largely ends at publication. We propose AI Audit After Peer Review, a framework that uses independent AI models to systematically scrutinize published scientific articles and identify specific, evidence-grounded concerns that remain open to investigation after peer review. As an initial demonstration, we audit 150 randomly sampled Organization Science articles published between 2010 and 2024. Two independent frontier AI models identify 927 distinct concerns. A third AI model independently adjudicates these concerns against the original articles, classifying 798 (86.1%) concerns as fully supported. Concerns independently identified by both discovery models are more likely to receive full adjudicator support than those identified by only one model. An inductively developed taxonomy reveals nine categories of potential scientific problems, ranging from causal identification and statistical inference to measurement and reporting inconsistencies. The process operates at low marginal cost (&lt;$1 per article), suggesting the feasibility of systematic post-publication auditing at scale. Importantly, AI adjudication does not establish that the identified concerns are genuine errors; independent human verification remains essential. We outline a research proposal to develop a persistent verification layer for published research. Our broader objective is to move beyond publication as an endpoint toward a more auditable, trustworthy, and self-correcting scientific record.</span></span></span><span class="muted small">Under review</span></li>
+    <li><span>Designing fair selection systems under identity constraints<span class="abs"><button class="abs-btn" type="button" aria-expanded="false" aria-controls="abs-fair">abstract</button><span class="abs-card" id="abs-fair" role="note"><b>ABSTRACT</b>Organizations increasingly face pressure to maintain diversity while operating under constraints on the use of identity-based selection criteria such as race, ethnicity or caste. A central question is whether ostensibly “neutral” alternatives, such as economic disadvantage, can substitute for identity-based targeting without reducing representation for historically marginalized groups. We provide a simple framework of selection under imperfect proxies and examine its predictions using data from the Indian Civil Services Examination, one of the world’s largest and most competitive recruitment systems. We find that Class-Based selection reduces representation for the most disadvantaged groups by at least 30%, as economic criteria imperfectly capture caste-based disadvantage. In contrast, Hybrid systems that preserve identity-based targeting for the most marginalized groups while applying economic criteria elsewhere can approximate the selection outcomes produced by Identity-Based selection when the groups being pooled are similarly positioned to compete for opportunities. The findings highlight how organizations can evaluate and redesign selection systems when identity-conscious policies are legally or politically constrained.</span></span></span><span class="muted small">Revise &amp; resubmit, Academy of Management Perspectives</span></li>
     <li><span>How robust are p-values to small sample exclusions?</span><span class="muted small">with S. Malik &amp; L. Franieck</span></li>
-    <li><span>Beyond majority voting: A group diversity rule for decision making</span><span class="muted small">with E. Diecidue &amp; M. Seifert</span></li>
+    <li><span>Beyond majority voting: A group diversity rule for decision making<span class="abs"><button class="abs-btn" type="button" aria-expanded="false" aria-controls="abs-gdr">abstract</button><span class="abs-card" id="abs-gdr" role="note"><b>ABSTRACT</b>In many decision problems, collective choices must balance the preferences of multiple parties with competing objectives. While majority rule and other judgment aggregation procedures reward alternatives that satisfy the largest subset of stakeholders, they do not account for the diversity of viewpoints. Building on target-based utility approaches, we introduce a group diversity rule (GDR) that assigns the highest utility to those alternatives that are preferred by the most diverse subset of stakeholders. We examine its behavioral relevance in two experimental studies involving a hiring decision and a radioactive waste disposal problem. Across both studies, collective decisions frequently coincide with the alternatives recommended by GDR, especially when decision makers are encouraged to consider minority stakeholder concerns. The results suggest that diversity-sensitive aggregation rules provide a simple and practical mechanism for incorporating diverse stakeholder perspectives in group decision making.</span></span></span><span class="muted small">with E. Diecidue &amp; M. Seifert</span></li>
     <li><span>When the past breaks: How the structure of the environment shapes temporal dependence and predictions from experience</span><span class="muted small">with S. Woo, J. Lejarraga &amp; T. Lejarraga</span></li>
+  </ul>
+  <h3 class="sub" style="margin-top:16px">Abandoned papers</h3>
+  <ul class="wp">
+    <li><span>It depends on who's asking: Role-based AI advice and why people might miss it<span class="abs"><button class="abs-btn" type="button" aria-expanded="false" aria-controls="abs-roles">abstract</button><span class="abs-card" id="abs-roles" role="note"><b>ABSTRACT</b>People increasingly consult large language models before they buy or sell. We examine whether these models give the same advice to both sides of a transaction, and whether users realize when they don't. In a pre-registered audit of [N] real used-car listings evaluated by [K] large language models (Study 1), identical vehicles, with advertised prices removed, received systematically different valuations depending on whether the user said they wanted to buy or to sell. Sellers were told the car was worth [X]% more than buyers were, and the shift appeared not only in strategic recommendations (asking prices) but in the models' estimates of value itself. In pre-registered experiments (Studies 2–3, N = [total]), participants did not anticipate this: most expected the AI models to give buyers and sellers the same valuation, and they relied on role-based advice as much as on neutral advice. Showing users the advice given to the other side restored calibration. We introduce role-based AI advice as a distinct form of advisor bias, one that evades the skepticism people typically apply to conflicted human advisors.<b class="why">WHY ABANDONED</b>The Study 1 pilot did not show the anticipated effect. Claude, especially, gave nearly identical car valuations to buyers and sellers.</span></span></span></li>
   </ul>
 </section>
 
@@ -257,6 +276,23 @@ document.getElementById('contact').addEventListener('submit', function (e) {
   var sign = (name || email) ? '\n\n— ' + name + (email ? ' (' + email + ')' : '') : '';
   window.location.href = 'mailto:prana.n88@gmail.com?subject=' + encodeURIComponent('Hello from your website') +
     '&body=' + encodeURIComponent(msg + sign);
+});
+
+
+// Abstract pop-ups: hover on laptops, tap on phones.
+document.querySelectorAll('.abs-btn').forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var box = btn.parentElement, open = !box.classList.contains('open');
+    document.querySelectorAll('.abs.open').forEach(function (o) { o.classList.remove('open'); o.firstElementChild.setAttribute('aria-expanded', 'false'); });
+    if (open) { box.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+  });
+});
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('.abs-card')) document.querySelectorAll('.abs.open').forEach(function (o) { o.classList.remove('open'); o.firstElementChild.setAttribute('aria-expanded', 'false'); });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') document.querySelectorAll('.abs.open').forEach(function (o) { o.classList.remove('open'); o.firstElementChild.blur(); });
 });
 
 // One mouse-wheel turn or one swipe moves between the opening screen and About.
